@@ -38,7 +38,7 @@ class UserBehavior(TaskSet):
         self.client.play(self.url, duration=duration)
 
     def getFirstManifest(self):
-        response = self.client.request('http://c1.stage.playlists.ihrhls.com/77/playlist.m3u8', 'init')
+        response = self.client.request('http://52.10.140.88:1935/demo/myStream/playlist.m3u8', 'init')
         print 'data --> ' +str(response.content)
         return self.parse(response.content)
 
